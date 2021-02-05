@@ -1,16 +1,7 @@
 body {
     background-color: rgb(240, 240, 240);
 }
-h1  {
-    color:#17a2b8;
-    text-align: center;
-}
-h2 {
-    color:#17a2b8;
-    text-align: center;
-    padding: 2%;
-}
-h5 {
+h1, h2, h5  {
     color:#17a2b8;
     text-align: center;
     padding: 2%;
@@ -27,20 +18,23 @@ h5 {
     margin: auto;
 }
 .introduction {
-    height: 100%;
+    height: auto;
     background-color: rgb(202, 222, 241);
     clip-path: polygon(0 14%, 100% 0, 100% 86%, 0% 100%);
-    padding: 20%;
+    padding: 15%;
+}
+
+@media screen and (max-width: 700px) {
+    .introduction {
+        clip-path: polygon(0 9%, 100% 0, 100% 95%, 0% 100%);
+        padding: 15%;
+    }
 }
 
 section {
     margin-bottom: 15px;
 }
-.image-header {
-    margin-bottom: 15px;
-    width: 75%;
-    height: 55%;
-}
+
 
 /*-------------------------Carousel--------------------------------*/
 #carouselExampleCaptions {
@@ -50,11 +44,19 @@ section {
 }
 .carousel slide img {
     width:100%;
-    height: auto;;
+    height: auto;
+    
+}
+
+@media screen and (max-width: 700px) {
+    #carouselExampleCaptions, .carousel slide img {
+        display: none;
+    }
 }
 /*-------------------------Footer--------------------------------*/
 footer {
     height: 100%;
     background-color: rgb(202, 222, 241);
     padding: 5%;
+    margin: auto;
 }
